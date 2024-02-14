@@ -1,12 +1,12 @@
 "use client";
+import NavHeader from "@/components/header/header";
 import Landing from "@/components/landing/landing";
 import Preloader from "@/components/preloader/preloader";
 import { AnimatePresence } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
-  const stickyElement = useRef(null);
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
@@ -21,10 +21,11 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="w-full min-h-screen bg-gray-50 h-[200vh]">
+    <main className="w-full bg-gray-50 h-[200vh]">
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
+      <NavHeader />
       <Landing />
     </main>
   );
