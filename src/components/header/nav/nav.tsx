@@ -9,7 +9,7 @@ import NavCurve from "./nav-curve";
 const navItems = [
   {
     title: "Home",
-    href: "/",
+    href: "#",
   },
   {
     title: "About",
@@ -17,19 +17,19 @@ const navItems = [
   },
   {
     title: "Skills",
-    href: "/skills",
+    href: "#skills",
   },
   {
     title: "Projects",
-    href: "/projects",
+    href: "#projects",
   },
   {
     title: "Experience",
-    href: "/experience",
+    href: "#experience",
   },
   {
     title: "Contact",
-    href: "/contact",
+    href: "#contact",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function Nav() {
       initial="initial"
       animate="enter"
       exit="exit"
-      className="h-screen bg-gray-800 fixed right-0 top-0 text-white"
+      className="h-screen bg-gray-800 fixed right-0 top-0 text-white z-[1]"
     >
       <div className="h-full box-border p-28 flex flex-col justify-between">
         <div

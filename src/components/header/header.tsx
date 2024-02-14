@@ -16,7 +16,7 @@ export default function Header() {
   }, [pathname]);
   return (
     <>
-      <div className="p-[30px] fixed right-0 z-[1]">
+      <div className="p-[30px] fixed right-0 z-[2]">
         <div
           onClick={() => {
             setIsActive(!isActive);
