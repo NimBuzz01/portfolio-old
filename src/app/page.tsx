@@ -10,7 +10,7 @@ export default function Home() {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
+      const scroll = new LocomotiveScroll();
 
       setTimeout(() => {
         setIsLoading(false);
@@ -21,7 +21,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="w-full bg-zumthor-100 h-[200dvh]">
+    <main data-scroll-section className="w-full bg-gray-900 h-[200dvh]">
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>

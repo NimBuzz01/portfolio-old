@@ -16,12 +16,12 @@ export default function Header() {
   }, [pathname]);
   return (
     <>
-      <div className="p-[30px] fixed right-0 z-[2]">
+      <div className="p-[30px] fixed right-0 z-30">
         <div
           onClick={() => {
             setIsActive(!isActive);
           }}
-          className="w-16 h-16 rounded-[50%] bg-blue-600 flex items-center justify-center cursor-pointer"
+          className="w-16 h-16 rounded-[50%] bg-purple-600 flex items-center justify-center cursor-pointer"
         >
           <div
             className={`${styles.burger} ${

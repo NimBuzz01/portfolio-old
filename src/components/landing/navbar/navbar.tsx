@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
   }, [controls]);
 
   return (
-    <div className="absolute flex flex-col left-8 top-8 tracking-wider text-gray-600  space-y-1 md:text-lg lg:text-xl">
+    <div className="absolute flex flex-col left-8 top-8 tracking-wider text-gray-300  space-y-1 md:text-lg lg:text-xl xl:text-2xl">
       {navItems.map((link, index) => (
         <motion.a
           key={index}
@@ -45,6 +45,7 @@ const Navbar: React.FC = () => {
           animate={controls}
           custom={index}
           whileHover={{ fontWeight: "bold" }}
+          className="relative group"
         >
           {link.title}
         </motion.a>
