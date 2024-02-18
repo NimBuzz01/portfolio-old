@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Navbar from "../navbar/navbar";
+import Navbar from "./navbar/navbar";
 
-const heading1: string = `Hi There, I'm`;
-const heading2: string = `Niamat Marjan.`;
+const words1 = ["Hi", "There,", "I'm"];
+const words2 = ["Niamat", "Marjan."];
 const description: string = `A passionate frontend developer & web designer propelling
 visions to reality`;
 
@@ -29,7 +29,7 @@ export default function Landing() {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 2.8 + Math.max(heading1.length, heading2.length) * 0.05,
+        delay: 3.5,
         duration: 2,
         type: "spring",
         stiffness: 500,
@@ -38,19 +38,20 @@ export default function Landing() {
     },
   };
 
-  const renderText = (text: string, startDelay: number = 0) =>
-    text.split(" ").map((word, i) => (
+  const renderText = (words: string[], startDelay: number = 0) =>
+    words.map((word, i) => (
       <React.Fragment key={i}>
         {word.split("").map((char, j) => (
           <motion.span
             key={j}
             custom={startDelay + i + j * 0.05}
             variants={letterVariants}
+            className="tracking-tighter"
           >
             {char}
           </motion.span>
         ))}
-        {i < text.split(" ").length - 1 && " "}
+        {i < words.length - 1 && <span>&nbsp;</span>}
       </React.Fragment>
     ));
 
@@ -63,14 +64,14 @@ export default function Landing() {
           initial="hidden"
           animate="visible"
         >
-          {renderText(heading1)}
+          {renderText(words1)}
         </motion.h1>
         <motion.h1
           className="flex text-gray-800 text-4xl sm:text-6xl md:text-7xl lg-text-8xl xl:text-9xl 2xl:text-10xl uppercase font-extrabold sm:translate-x-6 md:translate-x-8 lg:translate-x-10 xl:translate-x-12"
           initial="hidden"
           animate="visible"
         >
-          {renderText(heading2)}
+          {renderText(words2)}
         </motion.h1>
         <motion.p
           className="text-gray-500 sm:text-center text-lg sm:text-xl md:text-2xl w-full leading-tight mt-3 sm:mt-10 sm:max-w-96 md:max-w-[34rem]"
