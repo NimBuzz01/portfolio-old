@@ -28,6 +28,7 @@ export default function Intro() {
             transition={{
               type: "tween",
               duration: 0.2,
+              delay: 3,
             }}
           >
             <Image
@@ -48,7 +49,7 @@ export default function Intro() {
             transition={{
               type: "spring",
               stiffness: 125,
-              delay: 0.1,
+              delay: 3.1,
               duration: 0.7,
             }}
           >
@@ -61,6 +62,9 @@ export default function Intro() {
         className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 3,
+        }}
       >
         <span className="font-bold">Hello, I'm Niamat.</span> I'm a full-stack
         web developer with <span className="font-bold">2 years</span> of
@@ -73,7 +77,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.1,
+          delay: 3.1,
         }}
       >
         <Link
