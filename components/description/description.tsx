@@ -23,7 +23,10 @@ export default function Description() {
           <p className="gap-2 m-0 text-3xl leading-12">
             {phrase.split(" ").map((word, index) => {
               return (
-                <span className="relative inline-flex overflow-hidden">
+                <span
+                  className="relative inline-flex overflow-hidden"
+                  key={index}
+                >
                   <motion.span
                     variants={slideUp}
                     custom={index}
