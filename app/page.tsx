@@ -1,14 +1,14 @@
 "use client";
 import Contact from "@/components/contact";
-import Description from "@/components/description/description";
 import Experience from "@/components/experience";
 import Intro from "@/components/intro";
-import Preloader from "@/components/preloader/preloader";
+import Preloader from "@/components/preloader";
 import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import About from "@/components/about";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,7 +28,7 @@ export default function Home() {
       </AnimatePresence>
       <Intro />
       <SectionDivider />
-      <Description />
+      <About />
       <Projects />
       <Skills />
       <Experience />

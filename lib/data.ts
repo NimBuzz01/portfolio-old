@@ -3,6 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
+import zriImg from "@/public/zriadventures.png";
 
 export const links = [
   {
@@ -70,7 +71,8 @@ export const projectsData = [
     title: "ZRI Adventures",
     description: "ZRI Adventures is a Sri Lankan adventure agency.",
     tags: ["Next.js", "Typescript", "Tailwind CSS", "Strapi", "PostgreSQL"],
-    imageUrl: corpcommentImg,
+    imageUrl: zriImg,
+    link: "https://zriadventures.com",
   },
   {
     title: "Atmosync",
@@ -86,6 +88,7 @@ export const projectsData = [
       "Pytorch",
     ],
     imageUrl: rmtdevImg,
+    link: "https://atmosync.vercel.app/",
   },
 ] as const;
 
