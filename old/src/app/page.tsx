@@ -1,4 +1,5 @@
 "use client";
+import About from "@/components/about/about";
 import NavHeader from "@/components/header/header";
 import Landing from "@/components/landing/landing";
 import Preloader from "@/components/preloader/preloader";
@@ -21,12 +22,13 @@ export default function Home() {
   }, []);
 
   return (
-    <main data-scroll-section className="w-full bg-gray-900 h-[200dvh]">
+    <main data-scroll-section className="w-full bg-slate-100 h-[200dvh]">
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
       <NavHeader />
       <Landing />
+      <About />
     </main>
   );
 }
