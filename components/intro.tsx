@@ -32,7 +32,7 @@ export default function Intro() {
           >
             <Image
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
-              alt="Ricardo portrait"
+              alt="Profile portrait"
               width="192"
               height="192"
               quality="95"
@@ -69,7 +69,7 @@ export default function Intro() {
       </motion.h1>
 
       <motion.div
-        className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
+        className="flex flex-wrap items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -90,11 +90,10 @@ export default function Intro() {
 
         <a
           className="flex items-center gap-2 py-3 transition bg-white rounded-full outline-none cursor-pointer group px-7 focus:scale-110 hover:scale-110 active:scale-105 borderBlack dark:bg-white/10"
-          href="/CV.pdf"
+          href="/niamatmarjan-cv.pdf"
           download
         >
-          Download CV{" "}
-          <HiDownload className="transition opacity-60 group-hover:translate-y-1" />
+          Download CV <HiDownload className="transition opacity-60" />
         </a>
 
         <a

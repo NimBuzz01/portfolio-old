@@ -3,7 +3,6 @@ import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
   {
@@ -41,27 +40,28 @@ export const experiencesData = [
     date: "2016-2020",
   },
   {
-    title:
-      "Bsc (Hons) in Computer Science at Informatics Institute of Technology",
+    title: "Bsc (Hons) in Computer Science",
     location: "Colombo, Sri Lanka",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "Majoring in Computer Science at Informatics Institute of Technology",
     icon: React.createElement(LuGraduationCap),
-    date: "2020 - present",
+    date: "2020 - Present",
   },
   {
     title: "Software Engineer Intern at WSO2",
     location: "Colombo, Sri Lanka",
-    description: "",
+    description:
+      "Worked on multiple projects ranging from React and Angular webapps to Java microservices. Additionally worked on projects that use WSO2 products.",
     icon: React.createElement(CgWorkAlt),
     date: "2022 - 2023",
   },
   {
     title: "Web Developer at ZRI Adventures (Pvt) Ltd",
     location: "Colombo, Sri Lanka",
-    description: "",
+    description:
+      "Designed and developed the company website, and currently is an active maintainer.",
     icon: React.createElement(CgWorkAlt),
-    date: "2023 - present",
+    date: "2023 - Present",
   },
 ] as const;
 
@@ -69,30 +69,21 @@ export const projectsData = [
   {
     title: "ZRI Adventures",
     description: "ZRI Adventures is a Sri Lankan adventure agency.",
-    tags: [
-      "React",
-      "Next.js",
-      "Typescript",
-      "Tailwind CSS",
-      "Strapi",
-      "PostgreSQL",
-      "Railway",
-      "Vercel",
-    ],
+    tags: ["Next.js", "Typescript", "Tailwind CSS", "Strapi", "PostgreSQL"],
     imageUrl: corpcommentImg,
   },
   {
     title: "Atmosync",
-    description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+    description: "Ambiance Classification based Music Recommendation System",
     tags: [
-      "React",
       "Next.js",
       "TypeScript",
       "Tailwind CSS",
       "Prisma",
       "PostgreSQL",
-      "Vercel",
+      "Python",
+      "Flask",
+      "Pytorch",
     ],
     imageUrl: rmtdevImg,
   },
@@ -106,7 +97,6 @@ export const skillsData = [
   "Next.js",
   "TypeScript",
   "Tailwind CSS",
-  "Material-UI",
   "Node.js",
   "Git",
   "Prisma",
@@ -118,4 +108,5 @@ export const skillsData = [
   "Python",
   "Java",
   "Framer Motion",
+  "Angular",
 ] as const;
