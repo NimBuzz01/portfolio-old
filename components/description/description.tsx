@@ -20,7 +20,7 @@ export default function Description() {
       <SectionHeading>About me</SectionHeading>
       <div ref={description}>
         <div className="relative flex flex-col items-center gap-12 mt-12 lg:items-start lg:flex-row">
-          <p className="gap-2 m-0 text-3xl leading-12">
+          <p className="gap-2 m-0 text-2xl leading-10 md:text-3xl">
             {phrase.split(" ").map((word, index) => {
               return (
                 <span
