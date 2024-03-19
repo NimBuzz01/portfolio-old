@@ -1,6 +1,6 @@
 "use client";
-import About from "@/components/about";
 import Contact from "@/components/contact";
+import Description from "@/components/description/description";
 import Experience from "@/components/experience";
 import Intro from "@/components/intro";
 import Preloader from "@/components/preloader/preloader";
@@ -28,7 +28,7 @@ export default function Home() {
       </AnimatePresence>
       <Intro />
       <SectionDivider />
-      <About />
+      <Description />
       <Projects />
       <Skills />
       <Experience />
