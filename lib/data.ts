@@ -1,6 +1,5 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
@@ -35,7 +34,7 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Completed Ordinary Level and Advanced Level",
+    title: "Ordinary Level and Advanced Level",
     location: "Colombo, Sri Lanka",
     description: "",
     icon: React.createElement(LuGraduationCap),
@@ -68,25 +67,34 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
-    description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+    title: "ZRI Adventures",
+    description: "ZRI Adventures is a Sri Lankan adventure agency.",
+    tags: [
+      "React",
+      "Next.js",
+      "Typescript",
+      "Tailwind CSS",
+      "Strapi",
+      "PostgreSQL",
+      "Railway",
+      "Vercel",
+    ],
     imageUrl: corpcommentImg,
   },
   {
-    title: "rmtDev",
+    title: "Atmosync",
     description:
       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+    tags: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma",
+      "PostgreSQL",
+      "Vercel",
+    ],
     imageUrl: rmtdevImg,
-  },
-  {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
   },
 ] as const;
 
