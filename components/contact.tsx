@@ -7,6 +7,8 @@ import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -52,7 +54,7 @@ export default function Contact() {
           toast.success("Email sent successfully!");
         }}
       >
-        <input
+        <Input
           className="px-4 transition-all rounded-lg h-14 borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 dark:outline-none"
           name="senderEmail"
           type="email"
@@ -60,7 +62,7 @@ export default function Contact() {
           maxLength={500}
           placeholder="Your email"
         />
-        <textarea
+        <Textarea
           className="p-4 my-3 transition-all rounded-lg h-52 borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 dark:outline-none"
           name="message"
           placeholder="Your message"
