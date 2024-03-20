@@ -7,8 +7,8 @@ export default function Footer() {
         &copy; 2024 Niamat Marjan. All rights reserved.
       </small>
       <p className="text-xs">
-        This website is built with Next.js, TypeScript, Tailwind CSS, Framer
-        Motion, React Email & Resend, and hosted in Vercel.
+        This website is built with Next.js, TypeScript, Tailwind CSS and Framer
+        Motion.
       </p>
     </footer>
   );
