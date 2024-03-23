@@ -1,8 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
+import atmosync from "@/public/atmosync.png";
 import zriImg from "@/public/zriadventures.png";
 
 export const links = [
@@ -34,19 +33,12 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Ordinary Level and Advanced Level",
-    location: "Colombo, Sri Lanka",
-    description: "",
-    icon: React.createElement(LuGraduationCap),
-    date: "2016-2020",
-  },
-  {
-    title: "Bsc (Hons) in Computer Science",
+    title: "Web Developer at ZRI Adventures (Pvt) Ltd",
     location: "Colombo, Sri Lanka",
     description:
-      "Majoring in Computer Science at Informatics Institute of Technology",
-    icon: React.createElement(LuGraduationCap),
-    date: "2020 - Present",
+      "Designed and developed the company website, and currently is an active maintainer.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2023 - Present",
   },
   {
     title: "Software Engineer Intern at WSO2",
@@ -57,12 +49,19 @@ export const experiencesData = [
     date: "2022 - 2023",
   },
   {
-    title: "Web Developer at ZRI Adventures (Pvt) Ltd",
+    title: "Bsc (Hons) in Computer Science",
     location: "Colombo, Sri Lanka",
     description:
-      "Designed and developed the company website, and currently is an active maintainer.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2023 - Present",
+      "Majoring in Computer Science at Informatics Institute of Technology",
+    icon: React.createElement(LuGraduationCap),
+    date: "2020 - Present",
+  },
+  {
+    title: "Ordinary Level and Advanced Level",
+    location: "Colombo, Sri Lanka",
+    description: "",
+    icon: React.createElement(LuGraduationCap),
+    date: "2016-2020",
   },
 ] as const;
 
@@ -87,7 +86,7 @@ export const projectsData = [
       "Flask",
       "Pytorch",
     ],
-    imageUrl: rmtdevImg,
+    imageUrl: atmosync,
     link: "https://atmosync.vercel.app/",
   },
 ] as const;

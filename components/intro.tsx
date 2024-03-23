@@ -119,7 +119,7 @@ export default function Intro() {
 
         <a
           className="flex min-w-[11rem] justify-center text-sm sm:text-base items-center gap-2 py-3 transition bg-white rounded-full outline-none cursor-pointer group px-7 focus:scale-105 hover:scale-105 active:scale-105 borderBlack dark:bg-white/10"
-          href="/niamatmarjan-cv.pdf"
+          href="/niamatmarjan-resume.pdf"
           download
         >
           Download CV <HiDownload className="transition opacity-60" />
