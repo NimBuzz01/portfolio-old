@@ -1,8 +1,35 @@
 import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
-import { slideUp, opacity } from "./anim";
 import { useSectionInView } from "@/lib/hooks";
-import SectionHeading from "../section-heading";
+import SectionHeading from "./section-heading";
+
+const slideUp = {
+  initial: {
+    y: "100%",
+  },
+  open: (i: number) => ({
+    y: "0%",
+    transition: { duration: 0.5, delay: 0.01 * i },
+  }),
+  closed: {
+    y: "100%",
+    transition: { duration: 0.5 },
+  },
+};
+
+const opacity = {
+  initial: {
+    opacity: 0,
+  },
+  open: {
+    opacity: 1,
+    transition: { duration: 0.5 },
+  },
+  closed: {
+    opacity: 0,
+    transition: { duration: 0.5 },
+  },
+};
 
 export default function About() {
   const phrase = `Innovative Front-End Developer and UI/UX Designer with a passion for creating engaging digital experiences. Equipped with a keen eye for detail and a deep understanding of user-centered design principles, I bring creativity and technical expertise to every project.`;
@@ -18,10 +45,10 @@ export default function About() {
       transition={{ delay: 3.175 }}
       id="about"
     >
-      <SectionHeading>About me</SectionHeading>
+      <SectionHeading>About Me</SectionHeading>
       <div ref={description}>
         <div className="relative flex flex-col items-center gap-12 mt-12 lg:items-start lg:flex-row">
-          <p className="gap-2 m-0 text-xl sm:text-2xl leading-10 md:text-3xl">
+          <p className="gap-2 m-0 text-xl leading-10 sm:text-2xl md:text-3xl">
             {phrase.split(" ").map((word, index) => {
               return (
                 <span
@@ -43,7 +70,7 @@ export default function About() {
           </p>
           <motion.p
             variants={opacity}
-            className="w-4/5 m-0 sm:text-lg font-light"
+            className="w-4/5 m-0 font-light sm:text-lg"
             animate={isInView ? "open" : "closed"}
           >
             When I'm not coding, I enjoy playing video games. I also enjoy
