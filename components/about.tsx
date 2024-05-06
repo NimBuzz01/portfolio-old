@@ -1,4 +1,4 @@
-import { useInView, motion } from "framer-motion";
+import { useInView, motion, delay } from "framer-motion";
 import { useRef } from "react";
 import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "./section-heading";
@@ -54,7 +54,11 @@ const slideLeft = {
 export default function About() {
   const phrase = aboutMe.longDesc;
   const description = useRef(null);
-  const isInView = useInView(description);
+  const isInViewDesc = useInView(description);
+
+  const aboutUI = useRef(null);
+  const isInViewUI = useInView(aboutUI);
+
   const { ref } = useSectionInView("About", 0.5);
   return (
     <motion.section
@@ -78,7 +82,7 @@ export default function About() {
                   <motion.span
                     variants={slideUp}
                     custom={index}
-                    animate={isInView ? "open" : "closed"}
+                    animate={isInViewDesc ? "open" : "closed"}
                     key={index}
                     className="mr-1 sm:mb-2"
                   >
@@ -91,18 +95,21 @@ export default function About() {
           <motion.p
             variants={opacity}
             className="w-4/5 m-0 font-light sm:text-lg"
-            animate={isInView ? "open" : "closed"}
+            animate={isInViewDesc ? "open" : "closed"}
           >
             {aboutMe.shortDesc}
           </motion.p>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 justify-center items-center mt-20">
+      <div
+        className="flex flex-col lg:flex-row gap-16 lg:gap-20 justify-center items-center mt-20"
+        ref={aboutUI}
+      >
         <motion.div
           className="text-start"
           variants={slideLeft}
           custom={0}
-          animate={isInView ? "open" : "closed"}
+          animate={isInViewUI ? "open" : "closed"}
         >
           <p className="text-lg">Font</p>
           <h1 className="font-bold text-5xl sm:text-6xl md:text-7xl">
@@ -113,7 +120,7 @@ export default function About() {
           className="flex flex-col sm:flex-row gap-4"
           variants={slideLeft}
           custom={1}
-          animate={isInView ? "open" : "closed"}
+          animate={isInViewUI ? "open" : "closed"}
         >
           <ColorCard color={aboutMe.primaryColor} />
           <ColorCard color={aboutMe.secondaryColor} />
