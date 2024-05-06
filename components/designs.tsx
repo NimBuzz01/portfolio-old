@@ -6,7 +6,7 @@ import { galleryItems } from "@/lib/data";
 import SectionHeading from "./section-heading";
 
 export function Designs() {
-  const { ref } = useSectionInView("Designs", 0.5);
+  const { ref } = useSectionInView("Designs");
 
   return (
     <section

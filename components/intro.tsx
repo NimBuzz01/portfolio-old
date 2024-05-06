@@ -16,7 +16,7 @@ const description: string = `A passionate frontend developer & web designer prop
 visions to reality`;
 
 export default function Intro() {
-  const { ref } = useSectionInView("Home", 0.5);
+  const { ref } = useSectionInView("Home");
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   const letterVariants = {
