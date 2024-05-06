@@ -6,13 +6,13 @@ import { galleryItems } from "@/lib/data";
 import SectionHeading from "./section-heading";
 
 export function Designs() {
-  const { ref } = useSectionInView("Designs");
+  const { ref } = useSectionInView("Designs", 0.5);
 
   return (
     <section
       id="designs"
       ref={ref}
-      className="w-full mb-28 max-w-[66rem] scroll-mt-28 sm:mb-40"
+      className="w-full mb-28 scroll-mt-28 sm:mb-40"
     >
       <SectionHeading>My Designs</SectionHeading>
       <ParallaxGallery items={galleryItems} />

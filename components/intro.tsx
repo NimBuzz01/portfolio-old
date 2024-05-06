@@ -70,18 +70,18 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 lg:mt-24 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-28 lg:mt-24 text-center sm:mb-0 scroll-mt-[100rem]"
     >
       <div className="p-6 sm:flex z-10 sm:flex-col sm:items-center mt-auto sm:mt-0 w-full sm:text-center">
         <motion.h1
-          className="flex text-4xl sm:text-5xl md:text-6xl lg-text-7xl xl:text-8xl 2xl:text-9xl uppercase font-extrabold sm:-translate-x-24 md:-translate-x-28 lg:-translate-x-32 xl:-translate-x-36"
+          className="flex text-4xl sm:text-5xl md:text-6xl lg-text-7xl xl:text-8xl 2xl:text-9xl uppercase font-bold sm:-translate-x-24 md:-translate-x-28 lg:-translate-x-32 xl:-translate-x-36"
           initial="hidden"
           animate="visible"
         >
           {renderText(words1)}
         </motion.h1>
         <motion.h1
-          className="flex text-4xl sm:text-5xl md:text-6xl lg-text-7xl xl:text-8xl 2xl:text-9xl uppercase font-extrabold sm:translate-x-6 md:translate-x-8 lg:translate-x-10 xl:translate-x-12"
+          className="flex text-4xl sm:text-5xl md:text-6xl lg-text-7xl xl:text-8xl 2xl:text-9xl uppercase font-bold sm:translate-x-6 md:translate-x-8 lg:translate-x-10 xl:translate-x-12"
           initial="hidden"
           animate="visible"
         >
@@ -107,7 +107,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="flex min-w-[11rem] justify-center items-center gap-2 py-3 text-white text-sm sm:text-base transition bg-gray-900 rounded-full outline-none group px-7 focus:scale-105 hover:scale-105 hover:bg-gray-950 active:scale-105"
+          className="flex min-w-[11rem] justify-center items-center gap-2 py-3  text-sm sm:text-base transition rounded-full outline-none group px-7 focus:scale-105 hover:scale-105 active:scale-105             bg-cmaccent dark:bg-cmaccent/80 text-cmsecondary  hover:dark:bg-cmaccent  hover:bg-cmaccent/80"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -126,7 +126,7 @@ export default function Intro() {
         </a>
         <div className="flex gap-2 items-center justify-center">
           <a
-            className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-105 hover:scale-105 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+            className="bg-white p-4 text-gray-700 hover:text-cmaccent flex items-center gap-2 rounded-full focus:scale-105 hover:scale-105 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
             href="https://www.linkedin.com/in/niamatm/"
             target="_blank"
           >
@@ -134,7 +134,7 @@ export default function Intro() {
           </a>
 
           <a
-            className="bg-white justify-center p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-105 hover:scale-105 hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+            className="bg-white justify-center p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-105 hover:scale-105 hover:text-cmaccent active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
             href="https://github.com/NimBuzz01"
             target="_blank"
           >

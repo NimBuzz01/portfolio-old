@@ -19,6 +19,9 @@ const config = {
     },
     extend: {
       colors: {
+        cmprimary: "#0F172A",
+        cmsecondary: "#F8FAFC",
+        cmaccent: "#5755FE",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

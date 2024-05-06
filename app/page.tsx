@@ -23,7 +23,10 @@ export default function Home() {
     })();
   }, []);
   return (
-    <main data-scroll-section className="flex flex-col items-center px-4">
+    <main
+      data-scroll-section
+      className="container flex flex-col items-center px-4"
+    >
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>

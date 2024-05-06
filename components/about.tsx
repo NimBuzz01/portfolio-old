@@ -2,6 +2,10 @@ import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "./section-heading";
+import { aboutMe } from "@/lib/data";
+import { cn } from "@/lib/utils";
+import { Card } from "./ui/card";
+import ColorCard from "./color-card";
 
 const slideUp = {
   initial: {
@@ -31,15 +35,31 @@ const opacity = {
   },
 };
 
+const slideLeft = {
+  initial: {
+    x: "30%",
+    opacity: 0,
+  },
+  open: (i: number) => ({
+    x: "0%",
+    transition: { duration: 0.8, delay: 0.01 * i },
+  }),
+  closed: {
+    x: "30%",
+    opacity: 0,
+    transition: { duration: 0.8 },
+  },
+};
+
 export default function About() {
-  const phrase = `Innovative Front-End Developer and UI/UX Designer with a passion for creating engaging digital experiences. Equipped with a keen eye for detail and a deep understanding of user-centered design principles, I bring creativity and technical expertise to every project.`;
+  const phrase = aboutMe.longDesc;
   const description = useRef(null);
   const isInView = useInView(description);
-  const { ref } = useSectionInView("About");
+  const { ref } = useSectionInView("About", 0.5);
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[1200px] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-28 text-center leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 3.175 }}
@@ -48,7 +68,7 @@ export default function About() {
       <SectionHeading>About Me</SectionHeading>
       <div ref={description}>
         <div className="relative flex flex-col items-center gap-12 mt-12 lg:items-start lg:flex-row">
-          <p className="gap-2 m-0 text-xl leading-10 sm:text-2xl md:text-3xl">
+          <p className="gap-2 m-0 leading-10 text-lg sm:text-2xl md:text-3xl">
             {phrase.split(" ").map((word, index) => {
               return (
                 <span
@@ -60,7 +80,7 @@ export default function About() {
                     custom={index}
                     animate={isInView ? "open" : "closed"}
                     key={index}
-                    className="mr-1"
+                    className="mr-1 sm:mb-2"
                   >
                     {word}
                   </motion.span>
@@ -73,10 +93,32 @@ export default function About() {
             className="w-4/5 m-0 font-light sm:text-lg"
             animate={isInView ? "open" : "closed"}
           >
-            When I'm not coding, I enjoy playing video games. I also enjoy
-            learning new things.
+            {aboutMe.shortDesc}
           </motion.p>
         </div>
+      </div>
+      <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 justify-center items-center mt-20">
+        <motion.div
+          className="text-start"
+          variants={slideLeft}
+          custom={0}
+          animate={isInView ? "open" : "closed"}
+        >
+          <p className="text-lg">Font</p>
+          <h1 className="font-bold text-5xl sm:text-6xl md:text-7xl">
+            {aboutMe.favFont}
+          </h1>
+        </motion.div>
+        <motion.div
+          className="flex flex-col sm:flex-row gap-4"
+          variants={slideLeft}
+          custom={1}
+          animate={isInView ? "open" : "closed"}
+        >
+          <ColorCard color={aboutMe.primaryColor} />
+          <ColorCard color={aboutMe.secondaryColor} />
+          <ColorCard color={aboutMe.accentColor} />
+        </motion.div>
       </div>
     </motion.section>
   );

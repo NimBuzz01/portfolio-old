@@ -1,8 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
-import atmosync from "@/public/atmosync.png";
-import zriImg from "@/public/zriadventures.png";
 
 export const links = [
   {
@@ -74,24 +72,37 @@ export const projectsData = [
     title: "ZRI Adventures",
     description: "ZRI Adventures is a Sri Lankan adventure agency.",
     tags: ["Next.js", "Typescript", "Tailwind CSS", "Strapi", "PostgreSQL"],
-    imageUrl: zriImg,
+    imageUrl: "/projects/zriadventures.png",
     link: "https://zriadventures.com",
   },
   {
-    title: "Atmosync",
-    description: "Ambiance Classification based Music Recommendation System",
+    title: "Dunes Cart - Website",
+    description: "Dunes Cart Ecommerce Website",
     tags: [
       "Next.js",
-      "TypeScript",
+      "Typescript",
+      "Tailwind CSS",
+      "Zustand",
+      "Shadcn/ui",
+      "PostgreSQL",
+    ],
+    imageUrl: "/projects/dunescart.png",
+    link: "https://dunescart-store.vercel.app/",
+  },
+  {
+    title: "Dunes Cart - Admin Dashboard",
+    description: "Dunes Cart Admin Dashboard",
+    tags: [
+      "Next.js",
+      "Typescript",
       "Tailwind CSS",
       "Prisma",
+      "Zod",
+      "Shadcn/ui",
       "PostgreSQL",
-      "Python",
-      "Flask",
-      "Pytorch",
     ],
-    imageUrl: atmosync,
-    link: "https://atmosync.vercel.app/",
+    imageUrl: "/projects/dunescart-admin.png",
+    link: "https://dunescart-admin.vercel.app/",
   },
 ] as const;
 
@@ -179,3 +190,14 @@ export const galleryItems = [
     thumbnail: "/designs/coming-soon.png",
   },
 ];
+
+export const aboutMe = {
+  longDesc:
+    "Innovative Front-End Developer and UI/UX Designer with a passion for creating engaging digital experiences. Equipped with a keen eye for detail and a deep understanding of user-centered design principles, I bring creativity and technical expertise to every project.",
+  shortDesc:
+    "When I'm not coding, I enjoy playing video games. I also enjoy learning new things.",
+  favFont: "Archivo",
+  primaryColor: "#0F172A",
+  secondaryColor: "#F8FAFC",
+  accentColor: "#5755FE",
+} as const;
