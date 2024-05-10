@@ -117,7 +117,7 @@ export default function About() {
           </h1>
         </motion.div>
         <motion.div
-          className="flex flex-col sm:flex-row gap-4"
+          className="flex sm:flex-row gap-4"
           variants={slideLeft}
           custom={1}
           animate={isInViewUI ? "open" : "closed"}
