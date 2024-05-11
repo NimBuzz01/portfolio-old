@@ -1,14 +1,13 @@
 "use client";
-
 import React from "react";
-import SectionHeading from "./section-heading";
+import SectionHeading from "../section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
-import SubmitBtn from "./submit-btn";
+import SubmitBtn from "../submit-btn";
 import toast from "react-hot-toast";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -44,7 +43,7 @@ export default function Contact() {
       <form
         className="flex flex-col mt-10 dark:text-black"
         action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
+          const { error } = await sendEmail(formData);
 
           if (error) {
             toast.error(error);

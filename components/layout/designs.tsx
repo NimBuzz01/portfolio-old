@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import { ParallaxGallery } from "./ui/parallax-gallery";
+import { ParallaxGallery } from "../ui/parallax-gallery";
 import { useSectionInView } from "@/lib/hooks";
-import { galleryItems } from "@/lib/data";
-import SectionHeading from "./section-heading";
+import SectionHeading from "../section-heading";
+import { galleryItems } from "@/lib/data/gallery";
 
 export function Designs() {
   const { ref } = useSectionInView("Designs");

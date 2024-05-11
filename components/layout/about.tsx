@@ -1,11 +1,9 @@
-import { useInView, motion, delay } from "framer-motion";
+import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 import { useSectionInView } from "@/lib/hooks";
-import SectionHeading from "./section-heading";
-import { aboutMe } from "@/lib/data";
-import { cn } from "@/lib/utils";
-import { Card } from "./ui/card";
-import ColorCard from "./color-card";
+import SectionHeading from "../section-heading";
+import ColorCard from "../color-card";
+import { aboutMe } from "@/lib/data/personal";
 
 const slideUp = {
   initial: {
