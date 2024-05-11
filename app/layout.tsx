@@ -7,6 +7,7 @@ import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -42,12 +43,12 @@ export default function RootLayout({
             {children}
             <SpeedInsights />
             <Footer />
-
             <Toaster position="top-right" />
             <ThemeSwitch />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
+      <GoogleAnalytics gaId="G-N68LKCXGV4" />
     </html>
   );
 }
