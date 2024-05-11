@@ -7,15 +7,15 @@ export const experiencesData = [
     title: "Web Developer at ZRI Adventures (Pvt) Ltd",
     location: "Colombo, Sri Lanka",
     description:
-      "Designed and developed the company website, and currently is an active maintainer.",
+      "Built a frontend with Next.js, Tailwind CSS, and TypeScript for a responsive interface. Used Strapi and PostgreSQL for efficient backend development and API functionality. Integrated PayHere, Koko, and MintPay for secure transactions. Optimized website performance with Google Analytics and SEO. Designed a user-friendly and engaging UI prioritizing accessibility.",
     icon: React.createElement(CgWorkAlt),
-    date: "2023 - Present",
+    date: "Sept 2023 - Nov 2023",
   },
   {
     title: "Software Engineer Intern at WSO2",
     location: "Colombo, Sri Lanka",
     description:
-      "Worked on multiple projects ranging from React and Angular webapps to Java microservices. Additionally worked on projects that use WSO2 products.",
+      "I created client demo web applications showcasing product features, designed the Open Healthcare Sandbox v3 to highlight WSO2 tools, and implemented microservices and APIs for scalable backend solutions using Choreo and WSO2 API Manager. I also conducted code reviews and issue resolution for quality assurance.",
     icon: React.createElement(CgWorkAlt),
     date: "2022 - 2023",
   },
@@ -25,7 +25,7 @@ export const experiencesData = [
     description:
       "Majoring in Computer Science at Informatics Institute of Technology",
     icon: React.createElement(LuGraduationCap),
-    date: "2020 - Present",
+    date: "2021 - 2024",
   },
   {
     title: "Ordinary Level and Advanced Level",

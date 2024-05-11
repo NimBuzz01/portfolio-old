@@ -9,7 +9,7 @@ import Skills from "@/components/layout/skills";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import About from "@/components/layout/about";
-import { Designs } from "@/components/layout/designs";
+import { CaseStudies } from "@/components/layout/case-studies";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,7 +34,7 @@ export default function Home() {
       <SectionDivider />
       <About />
       <Projects />
-      <Designs />
+      <CaseStudies />
       <Skills />
       <Experience />
       <Contact />

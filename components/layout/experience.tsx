@@ -17,7 +17,7 @@ export default function Experience() {
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>My Experiences</SectionHeading>
-      <VerticalTimeline lineColor="">
+      <VerticalTimeline lineColor="" className="overflow-hidden">
         {experiencesData.map((item, index) => {
           return <TimelineElement key={index} item={item} />;
         })}
@@ -35,7 +35,9 @@ function TimelineElement({ item }: { item: any }) {
       <VerticalTimelineElement
         contentStyle={{
           background:
-            theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
+            theme === "light"
+              ? "rgb(87 85 254 / 0.05)"
+              : "rgba(255, 255, 255, 0.05)",
           boxShadow: "none",
           border: "1px solid rgba(0, 0, 0, 0.05)",
           textAlign: "left",
@@ -56,8 +58,8 @@ function TimelineElement({ item }: { item: any }) {
         }}
       >
         <h3 className="font-semibold capitalize">{item.title}</h3>
-        <p className="font-normal !mt-0">{item.location}</p>
-        <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+        <p className="font-normal !mt-0 text-sm">{item.location}</p>
+        <p className="!mt-1 !font-normal text-sm text-neutral-500 dark:text-neutral-400">
           {item.description}
         </p>
       </VerticalTimelineElement>
