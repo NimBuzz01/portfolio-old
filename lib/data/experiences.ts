@@ -15,7 +15,7 @@ export const experiencesData = [
     title: "Software Engineer Intern at WSO2",
     location: "Colombo, Sri Lanka",
     description:
-      "I created client demo web applications showcasing product features, designed the Open Healthcare Sandbox v3 to highlight WSO2 tools, and implemented microservices and APIs for scalable backend solutions using Choreo and WSO2 API Manager. I also conducted code reviews and issue resolution for quality assurance.",
+      "Created client demo web applications showcasing product features, designed the Open Healthcare Sandbox v3 to highlight WSO2 tools, and implemented microservices and APIs for scalable backend solutions using Choreo and WSO2 API Manager. I also conducted code reviews and issue resolution for quality assurance.",
     icon: React.createElement(CgWorkAlt),
     date: "2022 - 2023",
   },

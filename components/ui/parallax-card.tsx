@@ -7,16 +7,16 @@ import Handwritten from "../handwritten";
 const sideNotes = [
   {
     className:
-      "absolute -top-10 left-0 sm:-left-[10%] sm:-rotate-12  sm:text-xl md:text-2xl",
+      "absolute -top-10 left-0 sm:-left-[10%] sm:-rotate-12 text-lg  sm:text-xl md:text-2xl",
     text: "Hover Over Them!",
   },
   {
     className:
-      "absolute -top-10 right-0 sm:-right-[10%] sm:rotate-12  sm:text-xl md:text-2xl",
+      "absolute -top-10 right-0 sm:-right-[10%] sm:rotate-12 text-lg sm:text-xl md:text-2xl",
     text: "Pretty Cool Right?",
   },
   {
-    className: "absolute -bottom-[10%] sm:text-xl md:text-2xl",
+    className: "absolute -bottom-[10%] text-lg sm:text-xl md:text-2xl",
     text: "I Like Cool Stuff",
   },
 ];

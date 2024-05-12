@@ -104,9 +104,16 @@ export default function About() {
         className="relative flex flex-col lg:flex-row gap-16 lg:gap-20 justify-center items-center mt-20"
         ref={aboutUI}
       >
-        <Handwritten className="absolute -top-[20%] sm:top-0 left-[10%] -rotate-12 text-xl md:text-2xl">
-          My Favourites!
-        </Handwritten>
+        <motion.div
+          variants={slideLeft}
+          custom={0}
+          animate={isInViewUI ? "open" : "closed"}
+          className="absolute -top-[20%] sm:top-0 left-[10%]"
+        >
+          <Handwritten className="-rotate-12 text-xl md:text-2xl">
+            My Favourites!
+          </Handwritten>
+        </motion.div>
         <motion.div
           className="text-start"
           variants={slideLeft}

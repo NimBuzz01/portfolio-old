@@ -29,7 +29,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className="!scroll-smooth scrollbar-thin scrollbar-thumb-cmprimary scrollbar-track-cmsecondary dark:scrollbar-thumb-cmsecondary dark:scrollbar-track-cmprimary"
+      className="!scroll-smooth select-none scrollbar-thin scrollbar-thumb-cmprimary scrollbar-track-cmsecondary dark:scrollbar-thumb-cmsecondary dark:scrollbar-track-cmprimary"
     >
       <body
         className={`${archivo.className} bg-cmsecondary text-cmprimary relative pt-28 sm:pt-36 dark:bg-cmprimary dark:text-cmsecondary dark:text-opacity-90`}
