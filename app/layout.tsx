@@ -1,6 +1,6 @@
 import Header from "@/components/header";
 import "./globals.css";
-import { Archivo } from "next/font/google";
+import { Archivo, Kalam } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";

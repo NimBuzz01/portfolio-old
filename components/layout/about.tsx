@@ -4,6 +4,7 @@ import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "../section-heading";
 import ColorCard from "../color-card";
 import { aboutMe } from "@/lib/data/personal";
+import Handwritten from "../handwritten";
 
 const slideUp = {
   initial: {
@@ -100,9 +101,12 @@ export default function About() {
         </div>
       </div>
       <div
-        className="flex flex-col lg:flex-row gap-16 lg:gap-20 justify-center items-center mt-20"
+        className="relative flex flex-col lg:flex-row gap-16 lg:gap-20 justify-center items-center mt-20"
         ref={aboutUI}
       >
+        <Handwritten className="absolute -top-[20%] sm:top-0 left-[10%] -rotate-12 text-xl md:text-2xl">
+          My Favourites!
+        </Handwritten>
         <motion.div
           className="text-start"
           variants={slideLeft}

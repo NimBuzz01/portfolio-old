@@ -4,6 +4,7 @@ import SectionHeading from "../section-heading";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import { skillsData } from "@/lib/data/skills";
+import Handwritten from "../handwritten";
 
 const fadeInAnimationVariants = {
   initial: {
