@@ -94,7 +94,7 @@ export default function Preloader() {
               variants={curve}
               initial="initial"
               exit="exit"
-              className="fill-gray-900"
+              className="fill-gray-950"
             ></motion.path>
           </svg>
         </>
