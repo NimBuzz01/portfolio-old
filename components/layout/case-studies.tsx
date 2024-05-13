@@ -3,7 +3,7 @@ import React from "react";
 import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "../section-heading";
 import ParallaxCard from "../ui/parallax-card";
-import { caseStudies } from "@/lib/data/case-studies";
+import { caseStudies, caseStudiesTemp } from "@/lib/data/case-studies";
 
 export function CaseStudies() {
   const { ref } = useSectionInView("Case Studies", 0.2);
@@ -16,7 +16,7 @@ export function CaseStudies() {
     >
       <SectionHeading>My Case Studies</SectionHeading>
       <div>
-        {caseStudies.map((item, i) => {
+        {caseStudiesTemp.map((item, i) => {
           return <ParallaxCard key={`p_${i}`} {...item} i={i} />;
         })}
       </div>

@@ -25,13 +25,13 @@ const ParallaxCard = ({
   title,
   description,
   image,
-  link,
+  id,
   i,
 }: {
   title: string;
   description: string;
   image: string;
-  link: string;
+  id: string;
   i: number;
 }) => {
   const config = sideNotes[i] || {};
@@ -40,7 +40,7 @@ const ParallaxCard = ({
       <div style={{ top: `calc(-5vh + ${i * 25}px)` }}>
         <CardContainer className="inter-var shadow-xl bg-cmsecondary dark:bg-cmprimary rounded-xl relative">
           <Handwritten className={config.className}>{config.text}</Handwritten>
-          <CardBody className="bg-cmaccent/90 text-white relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-gray-950 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[45rem] h-auto rounded-xl p-6 border origin-top">
+          <CardBody className="bg-cmaccent/5 dark:text-white relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-gray-950 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[45rem] h-auto rounded-xl p-6 border origin-top">
             <CardItem translateZ="50" className="sm:text-xl text-lg font-bold">
               {title}
             </CardItem>
@@ -64,9 +64,10 @@ const ParallaxCard = ({
               <CardItem
                 translateZ={20}
                 as={Link}
-                href={link}
-                target="__blank"
-                className="py-2 rounded-xl text-sm sm:text-base font-normal dark:text-cmaccent"
+                href={`/`}
+                // href={`/case-studies/${id}`}
+                // target="__blank"
+                className="py-2 hover:font-semibold hover:text-base sm:hover:text-lg transition-all rounded-xl text-sm sm:text-base font-normal text-cmaccent"
               >
                 Explore Case Study →
               </CardItem>

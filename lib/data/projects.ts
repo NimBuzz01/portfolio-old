@@ -7,7 +7,6 @@ export const projectsData: ProjectTypes[] = [
     tags: ["Next.js", "Typescript", "Tailwind CSS", "Strapi", "PostgreSQL"],
     imageUrl: "/projects/zriadventures.png",
     link: "https://zriadventures.com",
-    gradient: "from-yellow-400 to-orange-500",
   },
   {
     title: "Dunes Cart - Website",
@@ -21,7 +20,6 @@ export const projectsData: ProjectTypes[] = [
       "PostgreSQL",
     ],
     imageUrl: "/projects/dunescart.png",
-    gradient: "from-pink-300 to-pink-600",
     link: "https://dunescart-store.vercel.app/",
   },
   {
@@ -38,6 +36,5 @@ export const projectsData: ProjectTypes[] = [
     ],
     imageUrl: "/projects/dunescart-admin.png",
     link: "https://dunescart-admin.vercel.app/",
-    gradient: "from-sky-300 to-orange-500",
   },
 ];

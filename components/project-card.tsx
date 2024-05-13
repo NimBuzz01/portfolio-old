@@ -10,7 +10,6 @@ const ProjectCard = ({ project }: { project: ProjectTypes }) => {
     <div
       className={cn(
         `absolute inset-0 p-4 h-full flex flex-col justify-center w-full space-y-4 bg-gradient-to-r rounded-xl transition-all`,
-        project.gradient,
         inViewProject === project.title ? "opacity-100" : "opacity-0"
       )}
     >

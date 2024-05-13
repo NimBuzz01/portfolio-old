@@ -13,7 +13,7 @@ export default function Projects() {
     <section ref={ref} id="projects" className="scroll-mt-28 w-full">
       <SectionHeading>My Projects</SectionHeading>
       <div className="flex w-full gap-8 items-start">
-        <div className="w-full mb-12 md:py-[40dvh]">
+        <div className="w-full mb-12 md:py-[30dvh]">
           <ul>
             {projectsData.map((project, index) => (
               <li key={index}>

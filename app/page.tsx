@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import About from "@/components/layout/about";
 import { CaseStudies } from "@/components/layout/case-studies";
 import { TracingBeam } from "@/components/ui/tracing-beam";
+import Header from "@/components/header";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,6 +29,7 @@ export default function Home() {
       data-scroll-section
       className="container flex flex-col items-center px-4"
     >
+      <Header />
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
