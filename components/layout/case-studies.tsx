@@ -2,8 +2,8 @@
 import React from "react";
 import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "../section-heading";
-import { caseStudies } from "@/lib/data/case-studies";
 import ParallaxCard from "../ui/parallax-card";
+import { caseStudies } from "@/lib/data/case-studies";
 
 export function CaseStudies() {
   const { ref } = useSectionInView("Case Studies", 0.2);

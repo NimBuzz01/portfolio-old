@@ -10,6 +10,7 @@ import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import About from "@/components/layout/about";
 import { CaseStudies } from "@/components/layout/case-studies";
+import { TracingBeam } from "@/components/ui/tracing-beam";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,11 +33,13 @@ export default function Home() {
       </AnimatePresence>
       <Intro />
       <SectionDivider />
-      <About />
-      <Projects />
-      <CaseStudies />
-      <Skills />
-      <Experience />
+      <TracingBeam>
+        <About />
+        <Projects />
+        <CaseStudies />
+        <Skills />
+        <Experience />
+      </TracingBeam>
       <Contact />
     </main>
   );
