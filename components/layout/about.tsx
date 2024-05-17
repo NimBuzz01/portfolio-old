@@ -1,54 +1,11 @@
 import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
-import { useSectionInView } from "@/lib/hooks";
 import SectionHeading from "../section-heading";
 import ColorCard from "../color-card";
-import { aboutMe } from "@/lib/data/personal";
-import Handwritten from "../handwritten";
-
-const slideUp = {
-  initial: {
-    y: "100%",
-  },
-  open: (i: number) => ({
-    y: "0%",
-    transition: { duration: 0.5, delay: 0.01 * i },
-  }),
-  closed: {
-    y: "100%",
-    transition: { duration: 0.5 },
-  },
-};
-
-const opacity = {
-  initial: {
-    opacity: 0,
-  },
-  open: {
-    opacity: 1,
-    transition: { duration: 0.5 },
-  },
-  closed: {
-    opacity: 0,
-    transition: { duration: 0.5 },
-  },
-};
-
-const slideLeft = {
-  initial: {
-    x: "30%",
-    opacity: 0,
-  },
-  open: (i: number) => ({
-    x: "0%",
-    transition: { duration: 0.8, delay: 0.01 * i },
-  }),
-  closed: {
-    x: "30%",
-    opacity: 0,
-    transition: { duration: 0.8 },
-  },
-};
+import Handwritten from "../ui/handwritten";
+import { aboutMe } from "@/lib/data";
+import { useSectionInView } from "@/hooks/useSection";
+import { opacity, slideLeft, slideUp } from "@/lib/anim";
 
 export default function About() {
   const phrase = aboutMe.longDesc;
@@ -101,7 +58,7 @@ export default function About() {
         </div>
       </div>
       <div
-        className="relative flex flex-col lg:flex-row gap-16 lg:gap-20 justify-center items-center mt-20"
+        className="relative flex flex-col lg:flex-row gap-16 lg:gap-20 justify-center items-center mt-40"
         ref={aboutUI}
       >
         <motion.div

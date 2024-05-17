@@ -1,4 +1,4 @@
-import { links } from "./data/common";
+import { links } from "./data";
 
 export type SectionName = (typeof links)[number]["name"];
 
@@ -8,23 +8,4 @@ export interface ProjectTypes {
   tags: string[];
   imageUrl: string;
   link: string;
-}
-
-export interface CaseStudyTypes {
-  id: string;
-  title: string;
-  subtitle: string;
-  image: string;
-  info: {
-    role: string;
-    scope: string;
-    tools: string;
-    process: string;
-  };
-  description: string;
-  content: {
-    title: string;
-    description: string;
-    imageUrl?: string;
-  }[];
 }

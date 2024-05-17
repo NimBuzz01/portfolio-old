@@ -6,32 +6,17 @@ import ContactFormEmail from "@/email/contact-form-email";
 
 const resend = new Resend(process.env.RESEND_API_KEY as string);
 
-export const sendEmail = async (formData: FormData) => {
-  const senderEmail = formData.get("senderEmail");
-  const message = formData.get("message");
-
-  // simple server-side validation
-  if (!validateString(senderEmail, 500)) {
-    return {
-      error: "Invalid sender email",
-    };
-  }
-  if (!validateString(message, 5000)) {
-    return {
-      error: "Invalid message",
-    };
-  }
-
+export const sendEmail = async (values: { email: string; message: string }) => {
   let data;
   try {
     data = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
       to: "mniamatmarjan@gmail.com",
       subject: "Message from contact form | Portfolio",
-      reply_to: senderEmail,
+      reply_to: values.email,
       react: React.createElement(ContactFormEmail, {
-        message: message,
-        senderEmail: senderEmail,
+        message: values.message,
+        senderEmail: values.email,
       }),
     });
   } catch (error: unknown) {

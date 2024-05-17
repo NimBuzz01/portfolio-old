@@ -6,10 +6,10 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { useSectionInView } from "@/lib/hooks";
-import { useTheme } from "@/context/theme-context";
+import { useSectionInView } from "@/hooks/useSection";
 import { useInView } from "react-intersection-observer";
-import { experiencesData } from "@/lib/data/experiences";
+import { useTheme } from "next-themes";
+import { experiences } from "@/lib/data";
 
 export default function Experience() {
   const { ref } = useSectionInView("Experience");
@@ -18,7 +18,7 @@ export default function Experience() {
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>My Experiences</SectionHeading>
       <VerticalTimeline lineColor="" className="overflow-hidden">
-        {experiencesData.map((item, index) => {
+        {experiences.map((item, index) => {
           return <TimelineElement key={index} item={item} />;
         })}
       </VerticalTimeline>

@@ -1,4 +1,4 @@
-import { useProjectStore } from "@/context/useStore";
+import { useProjectStore } from "@/hooks/useStore";
 import { ProjectTypes } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import Image from "next/image";

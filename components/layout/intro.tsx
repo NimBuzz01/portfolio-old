@@ -5,8 +5,9 @@ import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
-import { useSectionInView } from "@/lib/hooks";
-import { useActiveSectionContext } from "@/context/active-section-context";
+import { useSectionInView } from "@/hooks/useSection";
+import { useSection } from "@/hooks/useSection";
+import { slideUpDesc, slideUpHeading } from "@/lib/anim";
 
 const words1 = ["Hi", "There,", "I'm"];
 const words2 = ["Niamat", "Marjan."];
@@ -15,37 +16,7 @@ visions to reality`;
 
 export default function Intro() {
   const { ref } = useSectionInView("Home");
-  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-
-  const letterVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.05 + 2.8,
-        duration: 0.3,
-        type: "spring",
-        stiffness: 100,
-        damping: 20,
-      },
-    }),
-  };
-
-  const textVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 3.5,
-        duration: 2,
-        type: "spring",
-        stiffness: 500,
-        damping: 30,
-      },
-    },
-  };
+  const { setActiveSection, setTimeOfLastClick } = useSection();
 
   const renderText = (words: string[], startDelay: number = 0) =>
     words.map((word, i) => (
@@ -54,7 +25,7 @@ export default function Intro() {
           <motion.span
             key={j}
             custom={startDelay + i + j * 0.05}
-            variants={letterVariants}
+            variants={slideUpHeading}
             className="tracking-tighter"
           >
             {char}
@@ -89,7 +60,8 @@ export default function Intro() {
           className=" text-start sm:text-center text-lg sm:text-xl md:text-2xl w-full leading-tight mt-3 sm:mt-10 sm:max-w-96 md:max-w-[34rem]"
           initial="hidden"
           animate="visible"
-          variants={textVariants}
+          variants={slideUpDesc}
+          custom={0}
         >
           {description}
         </motion.p>
@@ -97,11 +69,10 @@ export default function Intro() {
 
       <motion.div
         className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 3.6,
-        }}
+        initial="hidden"
+        animate="visible"
+        variants={slideUpDesc}
+        custom={1}
       >
         <Link
           href="#contact"

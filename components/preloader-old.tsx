@@ -1,15 +1,36 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { preloaderSlide, preloaderSlideUp } from "@/lib/anim";
-import { Copyright } from "lucide-react";
+import { preloaderOpacity, preloaderSlideUp } from "@/lib/anim";
 
-export default function Preloader() {
+const words = [
+  "Hello",
+  "Bonjour",
+  "Ciao",
+  "Olà",
+  "やあ",
+  "안녕",
+  "வணக்கம்",
+  "ආයුබෝවන්",
+];
+
+export default function PreloaderOld() {
+  const [index, setIndex] = useState(0);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
     setDimension({ width: window.innerWidth, height: window.innerHeight });
   }, []);
+
+  useEffect(() => {
+    if (index == words.length - 1) return;
+    setTimeout(
+      () => {
+        setIndex(index + 1);
+      },
+      index == 0 ? 1000 : 150
+    );
+  }, [index]);
 
   const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
     dimension.height
@@ -40,29 +61,15 @@ export default function Preloader() {
     >
       {dimension.width > 0 && (
         <>
-          <div className="absolute z-10 text-3xl sm:text-5xl font-bold text-white">
-            <motion.p
-              variants={preloaderSlide}
-              initial="hidden"
-              animate="open"
-              exit="closed"
-              custom={0}
-              className="mb-1 sm:mb-2"
-            >
-              Niamat Marjan
-            </motion.p>
-            <motion.div
-              variants={preloaderSlide}
-              initial="hidden"
-              animate="open"
-              exit="closed"
-              custom={1}
-              className="flex items-center gap-3"
-            >
-              <Copyright className="w-10 h-10" /> Folio 2024
-            </motion.div>
-          </div>
-
+          <motion.p
+            variants={preloaderOpacity}
+            initial="initial"
+            animate="enter"
+            className="absolute z-10 flex items-center text-4xl text-white"
+          >
+            <span className="block w-2.5 h-2.5 bg-white rounded-full mr-2.5"></span>
+            {words[index]}
+          </motion.p>
           <svg className="absolute top-0 w-full h-[calc(100%+75rem)]">
             <motion.path
               variants={curve}
