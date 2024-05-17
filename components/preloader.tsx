@@ -36,11 +36,11 @@ export default function Preloader() {
       variants={preloaderSlideUp}
       initial="initial"
       exit="exit"
-      className="fixed z-50 flex items-center justify-center w-screen h-screen bg-gray-900"
+      className="fixed z-50 flex items-center justify-center w-screen h-screen bg-cmprimary"
     >
       {dimension.width > 0 && (
         <>
-          <div className="absolute z-10 text-3xl sm:text-5xl font-bold text-white">
+          <div className="absolute z-10 text-2xl sm:text-4xl font-bold text-white">
             <motion.p
               variants={preloaderSlide}
               initial="hidden"
@@ -57,9 +57,9 @@ export default function Preloader() {
               animate="open"
               exit="closed"
               custom={1}
-              className="flex items-center gap-3 text-cmaccent"
+              className="flex items-center gap-2 sm:gap-3 text-cmaccent"
             >
-              <Copyright className="w-10 h-10" /> Folio 2024
+              <Copyright className="w-6 h-6 sm:w-9 sm:h-9" /> Folio 2024
             </motion.div>
           </div>
 

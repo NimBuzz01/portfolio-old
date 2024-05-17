@@ -39,36 +39,35 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 lg:mt-24 text-center sm:mb-0 scroll-mt-[100rem]"
+      className="h-screen relative flex flex-col justify-center items-center"
     >
-      <div className="p-6 sm:flex z-10 sm:flex-col sm:items-center mt-auto sm:mt-0 w-full sm:text-center">
+      <div className="w-full">
         <motion.h1
-          className="flex text-4xl sm:text-5xl md:text-6xl lg-text-7xl xl:text-8xl 2xl:text-9xl uppercase font-bold sm:-translate-x-24 md:-translate-x-28 lg:-translate-x-32 xl:-translate-x-36"
+          className="flex w-full self-start text-4xl sm:text-5xl md:text-6xl lg-text-7xl xl:text-8xl 2xl:text-9xl uppercase font-bold"
           initial="hidden"
           animate="visible"
         >
           {renderText(words1)}
         </motion.h1>
         <motion.h1
-          className="flex text-4xl sm:text-5xl md:text-6xl lg-text-7xl xl:text-8xl 2xl:text-9xl uppercase font-bold sm:translate-x-6 md:translate-x-8 lg:translate-x-10 xl:translate-x-12"
+          className="flex text-4xl sm:text-5xl md:text-6xl lg-text-7xl xl:text-8xl 2xl:text-9xl uppercase font-bold"
           initial="hidden"
           animate="visible"
         >
           {renderText(words2)}
         </motion.h1>
-        <motion.p
-          className=" text-start sm:text-center text-lg sm:text-xl md:text-2xl w-full leading-tight mt-3 sm:mt-10 sm:max-w-96 md:max-w-[34rem]"
-          initial="hidden"
-          animate="visible"
-          variants={slideUpDesc}
-          custom={0}
-        >
-          {description}
-        </motion.p>
       </div>
-
+      <motion.p
+        className="sm:text-center mb-8 sm:text-xl md:text-2xl w-full mt-6 sm:mt-10 sm:max-w-96 md:max-w-[34rem]"
+        initial="hidden"
+        animate="visible"
+        variants={slideUpDesc}
+        custom={0}
+      >
+        {description}
+      </motion.p>
       <motion.div
-        className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
+        className="flex flex-wrap items-center gap-2 sm:px-4 text-lg font-medium"
         initial="hidden"
         animate="visible"
         variants={slideUpDesc}
