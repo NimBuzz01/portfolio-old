@@ -57,7 +57,7 @@ export default function Preloader() {
               animate="open"
               exit="closed"
               custom={1}
-              className="flex items-center gap-3"
+              className="flex items-center gap-3 text-cmaccent"
             >
               <Copyright className="w-10 h-10" /> Folio 2024
             </motion.div>

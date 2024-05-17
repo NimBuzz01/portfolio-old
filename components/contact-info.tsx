@@ -18,7 +18,7 @@ const ContactInfo = () => {
                 custom={index}
                 animate={isInView ? "open" : "closed"}
                 key={index}
-                className="mr-3 sm:mb-2"
+                className="mr-4 sm:mb-2 font-light tracking-wider"
               >
                 {word}
               </motion.span>

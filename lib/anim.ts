@@ -64,7 +64,7 @@ export const slideUpDesc = {
     y: 0,
     transition: {
       delay: i * 0.1 + 3.5,
-      duration: 0.6,
+      duration: 0.5,
     },
   }),
 };
