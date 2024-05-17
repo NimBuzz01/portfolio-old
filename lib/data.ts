@@ -36,9 +36,9 @@ export const aboutMe = {
   shortDesc:
     "When I'm not coding, I enjoy playing video games. I also enjoy learning new things.",
   favFont: "Archivo",
-  primaryColor: "#0F172A",
-  secondaryColor: "#F8FAFC",
-  accentColor: "#5755FE",
+  primaryColor: "#030712",
+  secondaryColor: "#f3f4f6",
+  accentColor: "#4f46e5",
 } as const;
 
 export const experiences = [

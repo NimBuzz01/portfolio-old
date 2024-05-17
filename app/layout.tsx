@@ -5,7 +5,6 @@ import ThemeSwitch from "@/components/theme-switch";
 import { Toaster } from "react-hot-toast";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import ScrollProvider from "@/components/scroll-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const archivo = Archivo({
@@ -42,13 +41,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ScrollProvider>
-            {children}
-            <SpeedInsights />
-            <Footer />
-            <Toaster position="top-right" />
-            <ThemeSwitch />
-          </ScrollProvider>
+          {children}
+          <SpeedInsights />
+          <Footer />
+          <Toaster position="top-right" />
+          <ThemeSwitch />
         </ThemeProvider>
       </body>
       <GoogleAnalytics gaId={process.env.GA_MEASUREMENT_ID as string} />
