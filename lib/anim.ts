@@ -135,3 +135,9 @@ export const slideUpContact = {
     transition: { duration: 0.6 },
   },
 };
+
+export const projectNumberScroll = {
+  initial: { opacity: 0, y: 100 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -100 },
+};

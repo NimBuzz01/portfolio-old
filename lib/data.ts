@@ -70,40 +70,31 @@ export const experiences = [
   },
 ] as const;
 
-export const projects: ProjectTypes[] = [
+export const projects = [
   {
     title: "ZRI Adventures",
+    type: "E-commerce Website",
+    number: 1,
     description: "ZRI Adventures is a Sri Lankan adventure agency.",
-    tags: ["Next.js", "Typescript", "Tailwind CSS", "Strapi", "PostgreSQL"],
+    tags: ["Design", "Developement", "2023"],
     imageUrl: "/images/projects/zriadventures.webp",
     link: "https://zriadventures.com",
   },
   {
     title: "Dunes Cart - Website",
+    type: "E-commerce Website",
+    number: 2,
     description: "Dunes Cart Ecommerce Website",
-    tags: [
-      "Next.js",
-      "Typescript",
-      "Tailwind CSS",
-      "Zustand",
-      "Shadcn/ui",
-      "PostgreSQL",
-    ],
+    tags: ["Design", "Developement", "2024"],
     imageUrl: "/images/projects/dunescart.webp",
     link: "https://dunescart-store.vercel.app/",
   },
   {
     title: "Dunes Cart - Admin Dashboard",
+    type: "E-commerce Website",
+    number: 3,
     description: "Dunes Cart Admin Dashboard",
-    tags: [
-      "Next.js",
-      "Typescript",
-      "Tailwind CSS",
-      "Prisma",
-      "Zod",
-      "Shadcn/ui",
-      "PostgreSQL",
-    ],
+    tags: ["Design", "Developement", "2024"],
     imageUrl: "/images/projects/dunescart-admin.webp",
     link: "https://dunescart-admin.vercel.app/",
   },
