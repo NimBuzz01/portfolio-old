@@ -14,7 +14,7 @@ const ProjectNumber = ({ project }: { project: ProjectTypes }) => {
         `absolute inset-0 p-12 h-full overflow-hidden sm:text-7xl md:text-8xl text-9xl flex items-center w-full transition-all`
       )}
     >
-      <p className="font-semibold">0</p>
+      <p>0</p>
       <AnimatePresence initial={false}>
         {inViewProject === project.number && (
           <motion.div
@@ -25,7 +25,7 @@ const ProjectNumber = ({ project }: { project: ProjectTypes }) => {
             variants={projectNumberScroll}
             transition={{ duration: 0.5 }}
           >
-            <p className="font-bold">{project.number}</p>
+            <p>{project.number}.</p>
           </motion.div>
         )}
       </AnimatePresence>

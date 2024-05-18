@@ -33,7 +33,7 @@ export const slideLeft = {
   },
   open: (i: number) => ({
     x: "0%",
-    transition: { duration: 0.8, delay: 0.01 * i },
+    transition: { duration: 0.8, delay: 0.05 * i },
   }),
   closed: {
     x: "30%",
@@ -83,13 +83,15 @@ export const fadeInAnimationVariants = {
   }),
 };
 
-export const preloaderOpacity = {
+export const projectViewOpacity = {
   initial: {
     opacity: 0,
+    scale: 0,
   },
   enter: {
-    opacity: 0.75,
-    transition: { duration: 1, delay: 0.2 },
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.3, delay: 0.15 },
   },
 };
 

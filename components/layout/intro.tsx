@@ -43,14 +43,14 @@ export default function Intro() {
     >
       <div className="w-full">
         <motion.h1
-          className="flex w-full self-start text-4xl sm:text-5xl md:text-6xl lg-text-7xl xl:text-8xl 2xl:text-9xl uppercase font-bold"
+          className="flex w-full self-start text-4xl sm:text-6xl md:text-7xl lg-text-8xl xl:text-9xl uppercase font-bold"
           initial="hidden"
           animate="visible"
         >
           {renderText(words1)}
         </motion.h1>
         <motion.h1
-          className="flex text-4xl sm:text-5xl md:text-6xl lg-text-7xl xl:text-8xl 2xl:text-9xl uppercase font-bold"
+          className="flex text-4xl sm:text-6xl md:text-7xl lg-text-8xl xl:text-9xl uppercase font-bold"
           initial="hidden"
           animate="visible"
         >
@@ -58,7 +58,7 @@ export default function Intro() {
         </motion.h1>
       </div>
       <motion.p
-        className="sm:text-center mb-8 sm:text-xl md:text-2xl w-full mt-6 sm:mt-10 sm:max-w-96 md:max-w-[34rem]"
+        className="sm:text-center mb-8 sm:text-lg md:text-xl lg:text-2xl w-full mt-6 sm:mt-10 sm:max-w-96 md:max-w-[34rem]"
         initial="hidden"
         animate="visible"
         variants={slideUpDesc}
@@ -67,7 +67,7 @@ export default function Intro() {
         {description}
       </motion.p>
       <motion.div
-        className="flex flex-wrap items-center gap-2 sm:px-4 text-lg font-medium"
+        className="flex flex-wrap w-full justify-center items-center gap-2 sm:px-4 text-lg font-medium"
         initial="hidden"
         animate="visible"
         variants={slideUpDesc}
@@ -75,7 +75,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="flex min-w-[11rem] justify-center items-center gap-2 py-3  text-sm sm:text-base transition rounded-full outline-none group px-7 focus:scale-105 hover:scale-105 active:scale-105             bg-cmaccent dark:bg-cmaccent/80 text-cmsecondary  hover:dark:bg-cmaccent  hover:bg-cmaccent/80"
+          className="flex w-full sm:max-w-[12rem] justify-center items-center gap-2 py-3  text-sm sm:text-base transition rounded-full outline-none group focus:scale-105 hover:scale-105 active:scale-105             bg-cmaccent dark:bg-cmaccent/80 text-cmsecondary  hover:dark:bg-cmaccent  hover:bg-cmaccent/80"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -86,7 +86,7 @@ export default function Intro() {
         </Link>
 
         <a
-          className="flex min-w-[11rem] justify-center text-sm sm:text-base items-center gap-2 py-3 transition bg-white rounded-full outline-none cursor-pointer group px-7 focus:scale-105 hover:scale-105 active:scale-105 borderBlack dark:bg-white/10"
+          className="flex w-full sm:max-w-[12rem] justify-center text-sm sm:text-base items-center gap-2 py-3 transition bg-white rounded-full outline-none cursor-pointer group px-7 focus:scale-105 hover:scale-105 active:scale-105 borderBlack dark:bg-white/10"
           href="/niamatmarjan-resume.pdf"
           download
         >
