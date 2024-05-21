@@ -9,7 +9,7 @@ const ContactInfo = () => {
   const phrase = "Let's have a conversation";
   return (
     <div ref={ref}>
-      <h1 className="gap-2 m-0 leading-10 text-4xl sm:text-6xl max-w-sm">
+      <h1 className="gap-2 m-0 leading-10 text-4xl lg:text-6xl sm:text-5xl max-w-sm">
         {phrase.split(" ").map((word, index) => {
           return (
             <span className="relative inline-flex overflow-hidden" key={index}>
@@ -29,7 +29,7 @@ const ContactInfo = () => {
       <motion.p
         variants={slideLeft}
         animate={isInView ? "open" : "closed"}
-        className="mt-6 text-sm mb-1"
+        className="mt-6 mb-1"
         custom={0}
       >
         or feel free to contact me at

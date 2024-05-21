@@ -38,7 +38,7 @@ function ProjectCursor() {
       variants={projectViewOpacity}
       initial="initial"
       animate="enter"
-      className="fixed flex text-sm justify-center items-center w-20 h-20 z-[1000] bg-cmaccent/90 rounded-full pointer-events-none"
+      className="fixed flex text-sm justify-center items-center w-20 h-20 z-[1000] bg-cmaccent/90 text-cmsecondary rounded-full pointer-events-none"
     >
       View
     </motion.div>
