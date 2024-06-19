@@ -4,6 +4,7 @@ import { useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import ProjectCursor from "./project-cursor";
+import ImageReveal from "./image-reveal";
 
 const ProjectInfo = ({ project }: { project: ProjectTypes }) => {
   const ref = useRef(null);
@@ -27,12 +28,7 @@ const ProjectInfo = ({ project }: { project: ProjectTypes }) => {
       >
         {isHovered && <ProjectCursor />}
         <div className="relative aspect-video w-full">
-          <Image
-            src={project.imageUrl}
-            alt={project.title}
-            fill
-            style={{ objectFit: "contain" }}
-          />
+          <ImageReveal src={project.imageUrl} />
         </div>
         <div className="flex flex-col sm:flex-row items-start gap-2 sm:items-center sm:justify-between">
           <div className="mt-4">

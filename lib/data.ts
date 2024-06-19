@@ -43,11 +43,18 @@ export const aboutMe = {
 
 export const experiences = [
   {
+    title: "Frontend Developer at EMUQ Tech Inc.",
+    location: "Florida, USA",
+    // description:'',
+    icon: React.createElement(CgWorkAlt),
+    date: "May 2024 - Present",
+  },
+  {
     title: "Web Developer at ZRI Adventures (Pvt) Ltd",
     location: "Colombo, Sri Lanka",
     // description:'',
     icon: React.createElement(CgWorkAlt),
-    date: "Sept 2023 - Nov 2023",
+    date: "Sept 2023 - Present",
   },
   {
     title: "Software Engineer Intern at WSO2",
@@ -110,6 +117,9 @@ export const skills = [
   "Tailwind CSS",
   "Node.js",
   "Git",
+  "AWS",
+  "Docker",
+  "Appscript",
   "Prisma",
   "Strapi",
   "MongoDB",
@@ -119,5 +129,6 @@ export const skills = [
   "Python",
   "Java",
   "Framer Motion",
+  "GSAP",
   "Angular",
 ] as const;
